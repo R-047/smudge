@@ -1,0 +1,24 @@
+{
+  "name": "events_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.4.0",
+    "axios": "^1.1.2",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "kafkajs": "^2.2.0",
+    "node-rdkafka": "^2.13.0",
+    "redis": "^4.3.1"
+  },
+  "devDependencies": {
+    "prisma": "^4.4.0"
+  }
+}

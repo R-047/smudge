@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <label for="fname">page url:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <button id="submit_btn">Submit</button>
+    <input type="text" id="script_tag_container" name="fname"><br><br>
+    
+    <script>
+        console.log("hello")
+        const server_url = "http://localhost:3005"
+        document.getElementById("submit_btn").addEventListener('click', register)
+        async function register(){
+            const page_url = document.getElementById("fname").value
+            console.log(page_url)
+            const response = await axios.post(server_url+"/register", {
+                params: {
+                    page_url
+                }
+            })
+            console.log(response.data.script_tag)
+            document.getElementById("script_tag_container").value = response.data.script_tag
+            
+        }
+        
+    </script>
+</body>
+</html>
